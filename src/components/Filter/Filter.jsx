@@ -5,8 +5,8 @@ export const Filter = ({ handleChange, filter }) => {
       value={filter}
       type="text"
       name="filter"
-      placeholder="Search"
-      title="Search cntacts"
+      placeholder="Search by Name / Phone"
+      title="Search contacts by NAME and PHONE_NUMBER"
       required
     />
   );

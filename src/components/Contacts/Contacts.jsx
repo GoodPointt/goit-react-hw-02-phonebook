@@ -1,4 +1,4 @@
-export const Contacts = ({ contacts, filter }) => {
+export const Contacts = ({ contacts, filter, deleteContact }) => {
   return (
     <>
       {filter ? (
@@ -12,6 +12,9 @@ export const Contacts = ({ contacts, filter }) => {
             .map(filteredContact => (
               <li key={filteredContact.id}>
                 {filteredContact.name} {filteredContact.number}
+                <button onClick={() => deleteContact(filteredContact.id)}>
+                  X
+                </button>
               </li>
             ))}
         </ul>
@@ -20,6 +23,7 @@ export const Contacts = ({ contacts, filter }) => {
           {contacts.map(contact => (
             <li key={contact.id}>
               {contact.name} {contact.number}
+              <button onClick={() => deleteContact(contact.id)}>X</button>
             </li>
           ))}
         </ul>
