@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Filter = ({ handleChange, filter }) => {
   return (
     <input
@@ -10,4 +12,9 @@ export const Filter = ({ handleChange, filter }) => {
       required
     />
   );
+};
+
+Filter.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  filter: PropTypes.string,
 };

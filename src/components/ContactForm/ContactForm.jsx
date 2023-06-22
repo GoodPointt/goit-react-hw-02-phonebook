@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
@@ -112,3 +114,7 @@ export class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  addNewContact: PropTypes.func,
+};
